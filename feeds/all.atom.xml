@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Thiago Fontes</title><link href="https://thiagofontes.github.io/" rel="alternate"></link><link href="https://thiagofontes.github.io/feeds/all.atom.xml" rel="self"></link><id>https://thiagofontes.github.io/</id><updated>2017-09-07T00:00:00-03:00</updated><entry><title>Test post</title><link href="https://thiagofontes.github.io/test-post.html" rel="alternate"></link><published>2017-09-07T00:00:00-03:00</published><author><name>Thiago Fontes</name></author><id>tag:thiagofontes.github.io,2017-09-07:/test-post.html/</id><summary type="html">&lt;h2&gt;This is a test to pelica&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;One&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Two&lt;/p&gt;
+&lt;p&gt;Just testing...&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry></feed>
