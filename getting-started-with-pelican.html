@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Getting started with Pelican</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://thiagofontes.github.io" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://thiagofontes.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Thiago Fontes Full Atom Feed" />
+          <link href="https://thiagofontes.github.io/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Thiago Fontes Categories Atom Feed" />
+
+  <link href="https://thiagofontes.github.io/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://thiagofontes.github.io/theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="https://thiagofontes.github.io/getting-started-with-pelican.html" rel="canonical" />
+
+        <meta name="description" content="In this litle post I'll describe some of the configurations that I use do deploy with Pelican. After setting up you Pelican with github,...">
+
+        <meta name="author" content="Thiago Fontes">
+
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Thiago Fontes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Thiago Fontes" />
+    <meta property="og:description" content="View the blog." />
+    <meta property="og:url" content="https://thiagofontes.github.io" />
+      <meta property="og:image" content="https://thiagofontes.github.io/static/my_image.png" />
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="https://thiagofontes.github.io/author/thiago-fontes.html">
+  <meta property="og:url" content="https://thiagofontes.github.io/getting-started-with-pelican.html">
+  <meta property="og:title" content="Getting started with Pelican">
+  <meta property="article:published_time" content="2017-09-08 17:03:45-03:00">
+            <meta property="og:description" content="In this litle post I'll describe some of the configurations that I use do deploy with Pelican. After setting up you Pelican with github,...">
+
+            <meta property="og:image" content="https://thiagofontes.github.io/static/my_image.png">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://thiagofontes.github.io" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Getting started with Pelican</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://thiagofontes.github.io/author/thiago-fontes.html">Thiago fontes</a>
+            | <time datetime="Fri 08 September 2017">Fri 08 September 2017</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('static/my_image.png')">            
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>In this litle post I'll describe some of the configurations that I use do deploy
+with Pelican.</p>
+<p>After setting up you Pelican with github, one nice thing to do is to edit the makefiles</p>
+<div class="highlight"><pre><span></span>PAGESDIR=$(INPUTDIR)/pages
+DATE := $(shell date +&#39;%Y-%m-%d %H:%M:%S&#39;)
+SLUG := $(shell echo &#39;<span class="cp">${</span><span class="n">NAME</span><span class="cp">}</span>&#39; | sed -e &#39;s/[^[:alnum:]]/-/g&#39; | tr -s &#39;-&#39; | tr A-Z a-z)
+EXT ?= md
+
+newpost:
+ifdef NAME
+      echo &quot;Title: $(NAME)&quot; &gt;  $(INPUTDIR)/$(SLUG).$(EXT)
+      echo &quot;Slug: $(SLUG)&quot; &gt;&gt; $(INPUTDIR)/$(SLUG).$(EXT)
+      echo &quot;Date: $(DATE)&quot; &gt;&gt; $(INPUTDIR)/$(SLUG).$(EXT)
+      echo &quot;&quot;              &gt;&gt; $(INPUTDIR)/$(SLUG).$(EXT)
+      echo &quot;&quot;              &gt;&gt; $(INPUTDIR)/$(SLUG).$(EXT)
+      <span class="cp">${</span><span class="n">EDITOR</span><span class="cp">}</span> <span class="cp">${</span><span class="n">INPUTDIR</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">SLUG</span><span class="cp">}</span>.<span class="cp">${</span><span class="n">EXT</span><span class="cp">}</span> <span class="err">&amp;</span>
+else
+      @echo &#39;Variable NAME is not defined.&#39;
+      @echo &#39;Do make newpost NAME=&#39;&quot;&#39;&quot;&#39;Post Name&#39;&quot;&#39;&quot;
+endif
+
+editpost:
+ifdef NAME
+      <span class="cp">${</span><span class="n">EDITOR</span><span class="cp">}</span> <span class="cp">${</span><span class="n">INPUTDIR</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">SLUG</span><span class="cp">}</span>.<span class="cp">${</span><span class="n">EXT</span><span class="cp">}</span> <span class="err">&amp;</span>
+else
+      @echo &#39;Variable NAME is not defined.&#39;
+      @echo &#39;Do make editpost NAME=&#39;&quot;&#39;&quot;&#39;Post Name&#39;&quot;&#39;&quot;
+endif
+
+newpage:
+ifdef NAME
+      echo &quot;Title: $(NAME)&quot; &gt;  $(PAGESDIR)/$(SLUG).$(EXT)
+      echo &quot;Slug: $(SLUG)&quot; &gt;&gt; $(PAGESDIR)/$(SLUG).$(EXT)
+      echo &quot;&quot;              &gt;&gt; $(PAGESDIR)/$(SLUG).$(EXT)
+      echo &quot;&quot;              &gt;&gt; $(PAGESDIR)/$(SLUG).$(EXT)
+      <span class="cp">${</span><span class="n">EDITOR</span><span class="cp">}</span> <span class="cp">${</span><span class="n">PAGESDIR</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">SLUG</span><span class="cp">}</span>.$(EXT)
+else
+      @echo &#39;Variable NAME is not defined.&#39;
+      @echo &#39;Do make newpage NAME=&#39;&quot;&#39;&quot;&#39;Page Name&#39;&quot;&#39;&quot;
+endif
+
+editpage:
+ifdef NAME
+      <span class="cp">${</span><span class="n">EDITOR</span><span class="cp">}</span> <span class="cp">${</span><span class="n">PAGESDIR</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">SLUG</span><span class="cp">}</span>.$(EXT)
+else
+      @echo &#39;Variable NAME is not defined.&#39;
+      @echo &#39;Do make editpage NAME=&#39;&quot;&#39;&quot;&#39;Page Name&#39;&quot;&#39;&quot;
+endif
+
+this will make easier for you to start to write new posts and pages.
+</pre></div>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Getting started with Pelican&amp;url=https://thiagofontes.github.io/getting-started-with-pelican.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://thiagofontes.github.io/getting-started-with-pelican.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://thiagofontes.github.io/getting-started-with-pelican.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://thiagofontes.github.io/theme/js/script.js"></script>
+  
+</body>
+</html>
