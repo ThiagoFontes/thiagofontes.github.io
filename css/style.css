@@ -1,6 +1,10 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 14px;
+  background: #fcfcfc;
+/*   line-height: 1.12; */
 }
 
 header {
@@ -13,6 +17,15 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  font-size: 1em;
 }
 
 .h-name {
@@ -21,6 +34,9 @@ header {
   font-family: 'Lato', sans-serif;
 }
 
+.social {
+  margin-top: 15px;
+}
 .social-link {
   color: inherit;
   text-decoration: none;
@@ -29,9 +45,70 @@ header {
 
 section {
   color: #444;
+  margin-bottom: 30px;
+}
+
+.darker {
+  color: #212121;
+}
+
+.center-dash {
+  border-bottom: 1px solid #444;
+  margin: 2em 0;
+  width: 30%;
 }
 
 .notice {
   text-align: center;
-  padding: 20px;
+  margin: 10px;
+  color: #ba4244;
+  font-size: 21px;
+  border: solid 1px;
+  z-index: 20;
+}
+.main {
+  margin: 5px;
+}
+.box, .box-dec {
+  position: relative;
+  padding: 30px 30px 50px;
+  margin-bottom: 10px;
+  border: solid 1px #aaa;
+  z-index: 10;
+}
+
+.box-dec {
+  z-index: 0;
+}
+
+.box-dec-left {
+  border-right: 1px solid #aaa;
+  position: absolute;
+  top: -17px;
+  left: -12px;
+  width:30px;
+  height: 40px;
+  transform: rotate(45deg);
+  background: #fafafa;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.box-dec-right{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  bottom: -17px;
+  right: -11px;
+  width:30px;
+  height: 40px;
+  transform: rotate(45deg);
+  background: #fafafa;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+#profile-img {
+  border-radius: 50%;
+  width: 100%;
 }
