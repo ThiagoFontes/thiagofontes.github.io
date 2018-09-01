@@ -1,0 +1,37 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #212121;
+  color: #fafafa;
+  text-decoration: none;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-name {
+  font-size: 75px;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+}
+
+.social-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+section {
+  color: #444;
+}
+
+.notice {
+  text-align: center;
+  padding: 20px;
+}
