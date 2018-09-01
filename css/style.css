@@ -55,7 +55,7 @@ section {
 .center-dash {
   border-bottom: 1px solid #444;
   margin: 2em 0;
-  width: 30%;
+  width: 30px;
 }
 
 .notice {
@@ -72,9 +72,16 @@ section {
 .box, .box-dec {
   position: relative;
   padding: 30px 30px 50px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   border: solid 1px #aaa;
   z-index: 10;
+}
+
+.box-ico {
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #212121;
+  width: 20px;
 }
 
 .box-dec {
