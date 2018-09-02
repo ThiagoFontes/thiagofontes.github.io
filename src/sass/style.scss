@@ -1,18 +1,22 @@
 @import "includes/base";
-
-
+$c1: #212121;
+$c2: #D9DBF1;
+$c3: #D0CDD7;
+$c4: #ACB0BD;
+$c5: #416165;
+$c6: #fafafa;
 /* 212121, D9DBF1, D0CDD7, ACB0BD, 416165  */
-body{
+html, body{
   margin: 0;
   padding: 0;
   font-family: "Roboto Mono", sans-serif;
   font-size: 14px;
-  background: #fcfcfc;
+  background: $c6;
 /*   line-height: 1.12; */
 }
 
 header {
-  height: 300px;
+  height: 350px;
   background-color: #212121;
   color: #fafafa;
   text-decoration: none;
@@ -26,7 +30,7 @@ header {
 
 .h-name {
   padding: 20px 20px;
-  height: 300px;
+  height: 350px;
   width: 100%;
   position: absolute;
   display:flex;
@@ -38,7 +42,7 @@ header {
 }
 
 .name-box {
-  font-weight: 300;
+  font-weight: 350;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 50px;
   z-index: 100;
@@ -160,7 +164,7 @@ section {
 }
 
 .signature {
-  height: 132px;
+  height: 137px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
