@@ -13,20 +13,15 @@ section.about
           .center-dash
           h3 Contact
           br
-          .row
-            .col-xs-6.contact-icon
-              ion-icon(name="mail") 
-            .col-xs-6.contact-data
-              p thiago@thiaago.brrr
-            .col-xs-6.contact-icon
-              ion-icon(name="phone-portrait")
-            .col-xs-6.contact-data
-              p +00 (00) 00000 - 000
-            .col-xs-6.contact-icon
-              ion-icon(name="pin")
-            .col-xs-6.contact-data
-              p Brazil
-          br
+          .ico-line
+            ion-icon(name="mail").contact-field
+            h6.contact-field thiago93br@gmail.com
+          .ico-line
+            ion-icon(name="phone-portrait").contact-field
+            h6.contact-field +00 (00) 00000 - 000
+          .ico-line
+            ion-icon(name="pin").contact-field
+            p.contact-field Brazil
           .social
             a.social-link(href='https://github.com/ThiagoFontes')
               ion-icon(name="logo-github", size="large")
@@ -34,7 +29,7 @@ section.about
               ion-icon(name="logo-linkedin", size="large")
             a.social-link(href='https://codepen.io/FontesT')
               ion-icon(name="logo-codepen", size="large")
-          p Maybe I should center things over here
+          //- p Maybe I should center things over here
               
       .col-md-8.col-md-push-4
         .box
