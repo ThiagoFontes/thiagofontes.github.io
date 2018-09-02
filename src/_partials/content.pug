@@ -2,6 +2,8 @@
 
 //- section.notice
   p Em construção!
+section.menu
+//-   p Sobre | Projetos | Ilustrações
 section.about
   .container
     .row
@@ -9,19 +11,20 @@ section.about
         .box-dec
           //- .box-dec-left
           .box-dec-right
-          //- img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1705112/profile/profile-512.jpg")#profile-img
+          div(style="display:flex; justify-content: center")
+            img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1705112/profile/profile-512.jpg")#profile-img
           .center-dash
           h3 Contact
           br
           .ico-line
             ion-icon(name="mail").contact-field
-            h6.contact-field thiago93br@gmail.com
+            h6.ico-field thiago93br@gmail.com
           //- .ico-line
           //-   ion-icon(name="phone-portrait").contact-field
           //-   h6.contact-field +00 (00) 00000 - 000
           .ico-line
             ion-icon(name="pin").contact-field
-            p.contact-field Aracaju, Sergipe (Br)
+            p.ico-field Aracaju, Sergipe (Br)
           .social
             a.social-link(href='https://github.com/ThiagoFontes')
               ion-icon(name="logo-github", size="large")
@@ -32,11 +35,39 @@ section.about
           //- p Maybe I should center things over here
               
       .col-md-8.col-md-push-4
-        .box
+        .box.about-me
+          .box-dec-right
           .box-ico
-            h2.darker 
-              ion-icon(name="finger-print")
-          p.darker(style="font-size:20px;") About Me
-          p I study computer engineering at Universidade Federal de Sergipe (UFS).
+            .ico-line
+              h2.darker 
+                ion-icon(name="finger-print")
+              h2.darker.ico-field About Me
+          p I study computer engineering at Universidade Federal de Sergipe (UFS). I am Currently working with blockchain, IOT and simulation for my Undergraduate Thesis.
+          P Learn something new everyday!
           br
-          p.signature thiago@localhost
+          .box-ico
+            .ico-line
+              h6.darker
+                ion-icon(name="brush")
+              h5.darker.ico-field Hobbies
+          p Digital Art | Watercolor | Acoustic Guitar | Games | Ricing
+          br
+          .signature 
+            p - thiago.fontes@localhost
+    
+      .col-md-4.col-md-push-8
+        .box
+          .box-dec-left
+          .box-ico
+            .ico-line
+              h2.darker 
+                ion-icon(name="code-working")
+              h2.darker.ico-field Skills
+      .col-md-8.col-md-push-4(style="top:-27px;")
+        .box-dec
+          .box-dec-left
+          .box-ico
+            .ico-line
+              h2.darker 
+                ion-icon(name="time")
+              h2.darker.ico-field Experiences

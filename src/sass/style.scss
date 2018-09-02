@@ -97,9 +97,9 @@ section {
 
 .box-ico {
   position: relative;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #212121;
-  width: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #212121;
+  width: 30%;
 }
 
 .box-dec {
@@ -137,7 +137,8 @@ section {
 
 #profile-img {
   border-radius: 50%;
-  width: 50%;
+  width: 200px;
+  height: 200px;
   
 }
 
@@ -150,10 +151,18 @@ section {
   justify-content: left;
 }
 
-.contact-field {
-  margin-left: 1.5em;
+.ico-field {
+  margin-left: 15px;
+}
+
+.about-me {
+  height: 460px;
 }
 
 .signature {
-  text-align: right;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: rgb(102, 102, 102)
 }
