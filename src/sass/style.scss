@@ -156,11 +156,11 @@ section {
 }
 
 .about-me {
-  height: 460px;
+  height: fit-content;
 }
 
 .signature {
-  height: 150px;
+  height: 132px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
