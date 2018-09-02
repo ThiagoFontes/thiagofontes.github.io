@@ -14,9 +14,9 @@ var gulp = require('gulp'),
  * Directories here
  */
 var paths = {
-  public: './docs/',
+  public: './',
   sass: './src/sass/',
-  css: './docs/css/',
+  css: './css/',
   data: './src/_data/'
 };
 
@@ -27,7 +27,7 @@ gulp.task("scripts", function() {
   gulp.src("src/js/*.js")
     .pipe(include())
       .on('error', console.log)
-    .pipe(gulp.dest('./docs/js'));
+    .pipe(gulp.dest('./js/'));
 });
 
 
