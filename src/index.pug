@@ -1,0 +1,16 @@
+extends _layouts/home
+
+block head_end
+	//- link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css')
+	link(rel="stylesheet" href="/css/style.css")
+
+block content
+	include _partials/header
+	include _partials/content
+	include _partials/footer
+	
+
+block body_end
+	script(type="text/javascript" src="/js/script.js")
+	//- script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js')
+	//- script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js')
