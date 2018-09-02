@@ -4,6 +4,7 @@
 var gulp = require('gulp'),
   path = require('path'),
   data = require('gulp-data'),
+  uglify = require('gulp-uglify'),
   pug = require('gulp-pug'),
   prefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
@@ -27,6 +28,7 @@ gulp.task("scripts", function() {
   gulp.src("src/js/*.js")
     .pipe(include())
       .on('error', console.log)
+    .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 });
 
