@@ -1,61 +1,70 @@
 //- .content
 
-//- section.notice
-  p Em construção!
-section.menu
-//-   p Sobre | Projetos | Ilustrações
+//- section.menu
+
+br
 section.about
   .container
     .row
-      .col-md-4.col-md-push-8
+      .col-lg-4.col-lg-push-8
         .box-dec
           //- .box-dec-left
           .box-dec-right
-          div(style="display:flex; justify-content: center")
+          .profile-img
             img(alt="Photo of Thiago Fontes",src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1705112/profile/profile-512.jpg")#profile-img
-          .center-dash
-          h3 Contact
+          //- .center-dash
+          h2.session-heading Contact
           br
+          a.ico-line(href='https://www.linkedin.com/in/fontesthiago/')
+            .contact-field-text
+              p linkedin.com/in/fontesthiago
+            .contact-field-icon
+              i.fab.fa-linkedin
+          a.ico-line(href='https://github.com/ThiagoFontes')
+            .contact-field-text
+              p github.com/ThiagoFontes
+            .contact-field-icon
+              i.fab.fa-github
+          a.ico-line(href='https://codepen.io/FontesT')
+            .contact-field-text
+              p codepen.io/FontesT
+            .contact-field-icon
+              i.fab.fa-codepen
+          hr
           .ico-line
-            ion-icon(name="mail").contact-field
-            h6.ico-field thiago93br@gmail.com
-          //- .ico-line
-          //-   ion-icon(name="phone-portrait").contact-field
-          //-   h6.contact-field +00 (00) 00000 - 000
-          .ico-line
-            ion-icon(name="pin").contact-field
-            p.ico-field Aracaju, Sergipe (Br)
-          .social
-            a.social-link(href='https://github.com/ThiagoFontes')
-              ion-icon(name="logo-github", size="large")
-            a.social-link(href='https://www.linkedin.com/in/fontesthiago/')
-              ion-icon(name="logo-linkedin", size="large")
-            a.social-link(href='https://codepen.io/FontesT')
-              ion-icon(name="logo-codepen", size="large")
+            .contact-field-text
+              p Aracaju, Sergipe (Br)
+            .contact-field-icon
+              i.fas.fa-map-marker-alt
+          //- .social
+          //-   a.social-link(href='https://github.com/ThiagoFontes')
+          //-     ion-icon(name="logo-github", size="large")
+          //-   a.social-link(href='https://www.linkedin.com/in/fontesthiago/')
+          //-     ion-icon(name="logo-linkedin", size="large")
+          //-   a.social-link(href='https://codepen.io/FontesT')
+          //-     ion-icon(name="logo-codepen", size="large")
           //- p Maybe I should center things over here
               
-      .col-md-8.col-md-push-4
+      .col-lg-8.col-lg-push-4
         .box.about-me
           .box-dec-right
           .box-ico
             .ico-line
-              h2.darker 
-                ion-icon(name="finger-print")
-              h2.darker.ico-field About Me
+              i.fas.fa-user-alt.session-heading-icon
+              h2.session-heading-2 About Me
           p I study computer engineering at Universidade Federal de Sergipe (UFS). I am Currently working with blockchain, IOT and simulation for my Undergraduate Thesis.
           P Learn something new everyday!
           br
           .box-ico
             .ico-line
-              h6.darker
-                ion-icon(name="brush")
-              h5.darker.ico-field Hobbies
+              i.fas.fa-paint-brush.session-subheading
+              h3.ico-field.session-subheading Hobbies
           p Digital Art | Watercolor | Acoustic Guitar | Games | Ricing
           br
           .signature 
             p - thiago.fontes@localhost
     
-      .col-md-4.col-md-push-8
+      .col-lg-4.col-lg-push-8
         .box
           .box-dec-left
           .box-ico
@@ -63,7 +72,7 @@ section.about
               h2.darker 
                 ion-icon(name="code-working")
               h2.darker.ico-field Skills
-      .col-md-8.col-md-push-4(style="top:-27px;")
+      .col-lg-8.col-lg-push-4(style="top:-27px;")
         .box-dec
           .box-dec-left
           .box-ico

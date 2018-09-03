@@ -73,20 +73,6 @@ section {
   margin-bottom: 30px;
 }
 
-.center-dash {
-  border-bottom: 1px solid #fff;
-  margin: 2em 0;
-  width: 30px;
-}
-
-.notice {
-  text-align: center;
-  margin: 10px;
-  color: #ba4244;
-  font-size: 21px;
-  border: solid 1px;
-  z-index: 20;
-}
 .main {
   margin: 5px;
 }
@@ -103,7 +89,7 @@ section {
   position: relative;
   margin-bottom: 10px;
   border-bottom: 1px dashed #212121;
-  width: 30%;
+  width: 250px;
 }
 
 .box-dec {
@@ -146,25 +132,66 @@ section {
   
 }
 
-.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto{
-  padding: 0;
+.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto{
+  padding: 0px;
 }
 
 .ico-line {
   display:flex;
-  justify-content: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  text-decoration: none;
 }
 
-.ico-field {
+.contact-field-icon, .contact-field-text {
   margin-left: 15px;
+  font-size: 12pt;
+  text-decoration: none;
 }
+
+.contact-field-icon {
+  font-size: 16pt;
+}
+
+.contact-field-icon, .contact-field-text {
+  color: #fafafa;
+}
+
 
 .about-me {
   height: fit-content;
 }
 
+.profile-img {
+  display:flex;
+  justify-content: center
+}
+
+.session-heading {
+  background:$c6;
+  color: $c5;
+  border: #aaa 1px solid;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px;
+  margin: 20px 0;
+}
+
+.session-heading-2, .session-heading-icon, .session-subheading{
+  color: #323232;
+  text-transform: uppercase;
+  text-align: left;
+  // margin: 5px;
+  font-size: 20pt;
+}
+
+.session-subheading {
+  font-size: 14pt;
+}
+
 .signature {
-  height: 137px;
+  height: 202px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
