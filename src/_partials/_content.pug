@@ -1,0 +1,33 @@
+
+script(type="text/javascript", src="js/text.js")
+
+mixin field(name, data)
+  li.horizontal-field.col-lg-4= name
+  li.horizontal-field.col-lg-8= data
+
+section.personal
+  .container
+    .row
+      .col-lg-4.col-lg-push-8
+        h1#personal Personal
+        #name.horizontal-field.col-lg-12
+          +field('Nome', 'Thiago Fontes')
+        #age.col-lg-12
+          +field('Idade', '25')
+        #relationship.horizontal-field.col-lg-12
+          +field('Estado Civil','Solteiro')
+        #nationality.horizontal-field.col-lg-12
+          +field()
+        #languages.horizontal-field.col-lg-12
+
+section.contact
+  .container
+    .row
+      .col-lg-4.col-lg-push-8.print-only
+        h1#contact Contact
+        #mail.horizontal-field.col-lg-12
+          +field()
+        #number.horizontal-field.col-lg-12
+          +field()
+        #address.horizontal-field.col-lg-12
+          +field()
