@@ -15,10 +15,10 @@ html, body{
 /*   line-height: 1.12; */
 }
 
-
 section {
   list-style: none;
 }
+
 
 .horizontal-field {
   float: left;
@@ -35,6 +35,10 @@ header {
   display: block;
   z-index: 1;
   overflow: hidden;
+}
+
+.row {
+  overflow-x: hidden;
 }
 
 .h-name {
@@ -187,12 +191,16 @@ section {
   margin: 20px 0;
 }
 
-.session-heading-2, .session-heading-icon, .session-subheading{
+.session-heading-2, .session-heading-icon, .session-subheading, .session-heading-3{
   color: #323232;
   text-transform: uppercase;
   text-align: left;
   // margin: 5px;
   font-size: 20pt;
+}
+
+.session-heading-3 {
+  color: #fafafa
 }
 
 .session-subheading {
