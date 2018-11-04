@@ -116,16 +116,33 @@ section {
   color: #fafafa;
 }
 
-.portifolio-item {
+.portifolio-item, .blog-item {
   position: relative;
-  height: 300px;
+  height: 290px;
   background: #fafafa;
   padding: 5px;
+  cursor: pointer;
+  transition: color .15s ease-in-out,background-color .35s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.blog-item {
+  background: #416165;
+  color: #fafafa;
+  height: 344px;
+}
+
+.portifolio-item:hover {
+  background: #343a40
+}
+
+.blog-item:hover {
+  background: #fafafa;
+  color: #212121;
 }
 
 .box-border {
   padding: 1px;
-  margin: 1px;
+  margin: 2px;
   background: #323232;
   border: none;
   margin-bottom: 40px;
@@ -133,11 +150,13 @@ section {
 
 .button {
   border: 1px solid;
+  text-align: center;
+  width: 200px;
   padding: 5px 10px;
   margin: 10px;
 }
 
-.left-down {
+.left-down-notch {
   --notchSize: 40px;
   clip-path: 
     polygon(
@@ -150,7 +169,7 @@ section {
     );
 }
 
-.left-up {
+.left-up-notch {
   --notchSize: 40px;
   clip-path: 
     polygon(
@@ -161,7 +180,7 @@ section {
       0% 100%);
 }
 
-.right-up {
+.right-up-notch {
   --notchSize: 40px;
   clip-path: 
     polygon(
@@ -173,7 +192,7 @@ section {
     );
 }
 
-.right-down {
+.right-down-notch {
   --notchSize: 40px;
   clip-path: 
     polygon(
@@ -198,23 +217,18 @@ section {
 
 .ico-line {
   display:flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: space-between;
   align-items: end;
   text-decoration: none;
+  color: #fafafa;
 }
 
 .contact-field-icon, .contact-field-text {
-  margin-left: 15px;
-  font-size: 12pt;
+  // margin-left: 15px;
+  font-size: 11pt;
   text-decoration: none;
-}
-
-.contact-field-icon {
-  font-size: 16pt;
-}
-
-.contact-field-icon, .contact-field-text {
+  text-overflow: clip;
   color: #fafafa;
 }
 
@@ -265,4 +279,23 @@ section {
 .copyright {
   text-align: right;
   margin-right: 30px
+}
+
+.build {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-item {
+  padding: 5px;
+  margin: 2px;
+  border: 1px solid #343a40;
+  cursor: default;
+}
+
+//--------- Custom Bootstrap ---------
+.btn {
+  border-radius: 0;
+  padding: 10px;
+  margin: 6px;
 }

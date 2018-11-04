@@ -7,8 +7,8 @@ br
   .row
     .col-lg-4.col-lg-push-8
       section.contact
-        .box-border.right-down
-          .box-dec.right-down
+        .box-border.right-down-notch
+          .box-dec.right-down-notch
             //- .box-dec-left
             //-.box-dec-right
             .profile-img
@@ -41,8 +41,8 @@ br
     
     .col-lg-8.col-lg-push-4
       section.portifolio
-        .box-border.right-down
-          .box.right-down
+        .box-border.right-down-notch
+          .box.right-down-notch
             .box-ico
               .ico-line
                 //- i.fas.fa-user-alt.session-heading-icon
@@ -50,51 +50,97 @@ br
             .portifolio
               .row
                 .col-lg-4
-                  .box-border.right-down
-                    .portifolio-item.right-down
+                  .box-border.right-down-notch
+                    .portifolio-item.right-down-notch
                 
                 .col-lg-4
-                  .box-border.right-down
-                    .portifolio-item.right-down
+                  .box-border.right-down-notch
+                    .portifolio-item.right-down-notch
                 
                 .col-lg-4
-                  .box-border.right-down
-                    .portifolio-item.right-down
+                  .box-border.right-down-notch
+                    .portifolio-item.right-down-notch
             .row
-              .button Online Portifolio
-              .button Send me a e-mail
+              button.btn.btn-outline-dark.btn-sm
+                | Online Resume
+              
+              button.btn.btn-outline-dark.btn-sm(type="button" data-toggle="modal" data-target="#exampleModalCenter")
+                | Mail Me
+
         //- End Section 
 
-    .col-lg-4.col-lg-push-8
+    .col-lg-4.col-lg-push-8(style="margin-bottom: 38px;")
       section.about
-        .box-border.left-up
-          .box.left-up
+        .box-border.left-up-notch
+          .box.left-up-notch
             .box-ico
               .ico-line
                 //- h2.darker 
                   ion-icon(name="code-working")
                 h2.session-heading-2 About Me
             p Computer Engineering student at Universidade Federal de Sergipe (UFS). Working with blockchain, IOT and hardware simulation for my Undergraduate Thesis.
-            
+
             P Learn something new everyday!
-            br
+
             .box-ico
               .ico-line
-                //- i.fas.fa-paint-brush.session-subheading
                 h3.ico-field.session-subheading Hobbies
-            p Digital Art | Watercolor |
-              br
-              | Acoustic Guitar | Games | Ricing
+            .build
+              .btn-outline-dark.about-item Digital Art
+              .btn-outline-dark.about-item Watercolor
+              .btn-outline-dark.about-item Games
+              .btn-outline-dark.about-item Acoustic Guitar
+              .btn-outline-dark.about-item Ricing
+            br
+
+            .box-ico
+              .ico-line
+                h3.ico-field.session-subheading Build With
+            .build
+              .btn-outline-dark.about-item HTML5/PUG
+              .btn-outline-dark.about-item CSS3
+              .btn-outline-dark.about-item JS
+              .btn-outline-dark.about-item Bootstrap
+              .btn-outline-dark.about-item Node.JS
+              .btn-outline-dark.about-item VSCode
+              .btn-outline-dark.about-item Coffe
+              .btn-outline-dark.about-item Love
             //.signature 
               p - thiago.fontes@localhost
       //- End Section
 
     .col-lg-8.col-lg-push-4(style="top:-38px;")
       section.blog-preview
-        .box-border.left-up
-          .box-dec.left-up
+        .box-border.left-up-notch
+          .box-dec.left-up-notch
             .box-ico-dec
               .ico-line
                 //- h2.darker 
                   ion-icon(name="time")
                 h2.session-heading-3 Blog
+            .blog
+              .row
+                .col-lg-6
+                  .box-border.left-up-notch(style="background:white")
+                    .blog-item.left-up-notch
+                .col-lg-6
+                  .box-border.left-up-notch(style="background:white")
+                    .blog-item.left-up-notch
+            button.btn.btn-outline-light.btn-sm
+                | View More
+
+
+//- Mail Form
+
+.modal.fade#exampleModalCenter(role="dialog" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered(role="document")
+    .modal-content
+      .modal-header
+        h5.modal-title#exampleModalLabel This Form isn't active yet
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body
+        p This is a test
+      .modal-footer
+        button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+        button(type="button" class="btn btn-primary") Send Mail
