@@ -116,28 +116,42 @@ section {
   color: #fafafa;
 }
 
+.blog, .portifolio {
+  margin-top: 30px;
+}
+
 .portifolio-item, .blog-item {
   position: relative;
-  height: 290px;
+  height: 280px;
   background: #fafafa;
-  padding: 5px;
+  padding: 0;
   cursor: pointer;
   transition: color .15s ease-in-out,background-color .35s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.portfolio-img {
+  width: 100%;
+  max-height: 50%;
+  overflow: hidden;
+  border-bottom: 1px dashed #323232;
+  background: #929292;
+  padding: 0;
 }
 
 .blog-item {
   background: #416165;
   color: #fafafa;
-  height: 344px;
+  height: 325px;
 }
 
 .portifolio-item:hover {
-  background: #343a40
+  background: #416165;
+  color: #fafafa;
 }
 
 .blog-item:hover {
   background: #fafafa;
-  color: #212121;
+  color: #323232;
 }
 
 .box-border {
@@ -226,13 +240,18 @@ section {
 
 .contact-field-icon, .contact-field-text {
   // margin-left: 15px;
-  font-size: 11pt;
+  font-size: 12pt;
   text-decoration: none;
   text-overflow: clip;
   color: #fafafa;
 }
 
-
+.contact-field-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .about-me {
   height: fit-content;
 }
@@ -298,4 +317,32 @@ section {
   border-radius: 0;
   padding: 10px;
   margin: 6px;
+}
+
+// Custom Carousel
+.owl-carousel {
+  position: relative;
+}
+.owl-prev, .owl-next {
+  transform: scale(3);
+  background: rgba(50,50,50,0.55);
+  font-size: 30pt;
+  // text-align: center;
+  position: absolute;
+  top: 40%;
+  margin-top: -10px; // Half of the prev/next buttons height here in negatives to center them perfectly
+}
+.owl-prev {
+  margin-left: -2;
+}
+.owl-next {
+  right: 0;
+}
+
+.owl-prev:focus, .owl-next:focus {
+  outline: none;
+}
+
+.owl-dots {
+  display: none;
 }

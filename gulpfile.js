@@ -96,6 +96,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
+  gulp.watch('./src/_data/*.json', ['rebuild']);
   gulp.watch('./src/js/*.js', ['scripts']);
 });
 

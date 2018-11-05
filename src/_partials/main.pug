@@ -1,8 +1,6 @@
-//- .content
+//- each val in portifolio
+          p= val.title
 
-//- section.menu
-
-br
 .container
   .row
     .col-lg-4.col-lg-push-8
@@ -17,18 +15,18 @@ br
             h2.session-heading Contact
             br
             a.ico-line(href='https://www.linkedin.com/in/fontesthiago/')
-              .contact-field-text
-                p linkedin.com/in/fontesthiago
+              p.contact-field-text
+                | linkedin.com/in/fontesthiago
               .contact-field-icon
                 i.fab.fa-linkedin
             a.ico-line(href='https://github.com/ThiagoFontes')
-              .contact-field-text
-                p github.com/ThiagoFontes
+              p.contact-field-text
+                | github.com/ThiagoFontes
               .contact-field-icon
                 i.fab.fa-github
             a.ico-line(href='https://codepen.io/FontesT')
-              .contact-field-text
-                p codepen.io/FontesT
+              p.contact-field-text
+                | codepen.io/FontesT
               .contact-field-icon
                 i.fab.fa-codepen
             hr
@@ -40,7 +38,7 @@ br
       //- End Section   
     
     .col-lg-8.col-lg-push-4
-      section.portifolio
+      section.portifolio-preview
         .box-border.right-down-notch
           .box.right-down-notch
             .box-ico
@@ -48,18 +46,15 @@ br
                 //- i.fas.fa-user-alt.session-heading-icon
                 h2.session-heading-2 My work
             .portifolio
-              .row
-                .col-lg-4
+              .owl-carousel.owl-theme#carousel-portfolio
+                each val in portifolio
                   .box-border.right-down-notch
                     .portifolio-item.right-down-notch
-                
-                .col-lg-4
-                  .box-border.right-down-notch
-                    .portifolio-item.right-down-notch
-                
-                .col-lg-4
-                  .box-border.right-down-notch
-                    .portifolio-item.right-down-notch
+                      figure.portfolio-img
+                        img(src= val.image)
+                      h1= val.title
+                      p= val.content
+
             .row
               button.btn.btn-outline-dark.btn-sm
                 | Online Resume
@@ -95,7 +90,7 @@ br
 
             .box-ico
               .ico-line
-                h3.ico-field.session-subheading Build With
+                h3.ico-field.session-subheading Website Build With
             .build
               .btn-outline-dark.about-item HTML5/PUG
               .btn-outline-dark.about-item CSS3
@@ -119,13 +114,14 @@ br
                   ion-icon(name="time")
                 h2.session-heading-3 Blog
             .blog
-              .row
-                .col-lg-6
+              .owl-carousel.owl-theme#carousel-blog
+                each val in portifolio
                   .box-border.left-up-notch(style="background:white")
                     .blog-item.left-up-notch
-                .col-lg-6
-                  .box-border.left-up-notch(style="background:white")
-                    .blog-item.left-up-notch
+                      figure.portfolio-img
+                        img(src= val.image)
+                      h1= val.title
+                      p= val.content
             button.btn.btn-outline-light.btn-sm
                 | View More
 
