@@ -1,36 +1,33 @@
-//- each val in portifolio
-          p= val.title
-
 .container
   .row
     .col-lg-4.col-lg-push-8
       section.contact
         .box-border.right-down-notch
           .box-dec.right-down-notch
-            //- .box-dec-left
-            //-.box-dec-right
             .profile-img
               img(alt="Photo of Thiago Fontes",src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1705112/profile/profile-512.jpg")#profile-img
-            //- .center-dash
             h2.session-heading Contact
             br
-            a.ico-line(href='https://www.linkedin.com/in/fontesthiago/')
-              p.contact-field-text
-                | linkedin.com/in/fontesthiago
-              .contact-field-icon
-                i.fab.fa-linkedin
-            a.ico-line(href='https://github.com/ThiagoFontes')
-              p.contact-field-text
-                | github.com/ThiagoFontes
-              .contact-field-icon
-                i.fab.fa-github
-            a.ico-line(href='https://codepen.io/FontesT')
-              p.contact-field-text
-                | codepen.io/FontesT
-              .contact-field-icon
-                i.fab.fa-codepen
+            a(href='https://www.linkedin.com/in/fontesthiago/')
+              .contact-line
+                p.contact-field-text
+                  | linkedin.com/in/fontesthiago
+                .contact-field-icon
+                  i.fab.fa-linkedin
+            a(href='https://github.com/ThiagoFontes')
+              .contact-line
+                p.contact-field-text
+                  | github.com/ThiagoFontes
+                .contact-field-icon
+                  i.fab.fa-github
+            a(href='https://codepen.io/FontesT')
+              .contact-line
+                p.contact-field-text
+                  | codepen.io/FontesT
+                .contact-field-icon
+                  i.fab.fa-codepen
             hr
-            .ico-line
+            .contact-line
               .contact-field-text
                 p Aracaju, Sergipe (BR)
               .contact-field-icon
@@ -42,24 +39,22 @@
         .box-border.right-down-notch
           .box.right-down-notch
             .box-ico
-              .ico-line
-                //- i.fas.fa-user-alt.session-heading-icon
-                h2.session-heading-2 My work
+              h2.session-heading-2 My work
             .portifolio
               .owl-carousel.owl-theme#carousel-portfolio
                 each val in portifolio
                   .box-border.right-down-notch
-                    .portifolio-item.right-down-notch
+                    .portifolio-item.right-down-notch(type="button" data-toggle="modal" data-target="#modalTest")
                       figure.portfolio-img
                         img(src= val.image)
-                      h1= val.title
-                      p= val.content
+                      h1.item-title= val.title
+                      p.item-excerpt= val.content
 
             .row
-              button.btn.btn-outline-dark.btn-sm
+              button.btn.btn-outline-dark.btn-sm(type="button" data-toggle="modal" data-target="#modalTest")
                 | Online Resume
               
-              button.btn.btn-outline-dark.btn-sm(type="button" data-toggle="modal" data-target="#exampleModalCenter")
+              button.btn.btn-outline-dark.btn-sm(type="button" data-toggle="modal" data-target="#modalTest")
                 | Mail Me
 
         //- End Section 
@@ -69,10 +64,7 @@
         .box-border.left-up-notch
           .box.left-up-notch
             .box-ico
-              .ico-line
-                //- h2.darker 
-                  ion-icon(name="code-working")
-                h2.session-heading-2 About Me
+              h2.session-heading-2 About Me
             p Computer Engineering student at Universidade Federal de Sergipe (UFS). Working with blockchain, IOT and hardware simulation for my Undergraduate Thesis.
 
             P Learn something new everyday!
@@ -109,34 +101,31 @@
         .box-border.left-up-notch
           .box-dec.left-up-notch
             .box-ico-dec
-              .ico-line
-                //- h2.darker 
-                  ion-icon(name="time")
-                h2.session-heading-3 Blog
+              h2.session-heading-3 Blog
             .blog
               .owl-carousel.owl-theme#carousel-blog
                 each val in portifolio
                   .box-border.left-up-notch(style="background:white")
-                    .blog-item.left-up-notch
+                    .blog-item.left-up-notch(type="button" data-toggle="modal" data-target="#modalTest")
                       figure.portfolio-img
                         img(src= val.image)
-                      h1= val.title
-                      p= val.content
-            button.btn.btn-outline-light.btn-sm
+                      h1.item-title= val.title
+                      p.item-excerpt= val.content
+            button.btn.btn-outline-light.btn-sm(type="button" data-toggle="modal" data-target="#modalTest")
                 | View More
 
 
-//- Mail Form
+//- Modal Box
 
-.modal.fade#exampleModalCenter(role="dialog" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+.modal.fade#modalTest(role="dialog" tabindex="-1" aria-labelledby="modalTestTitle" aria-hidden="true")
   .modal-dialog.modal-dialog-centered(role="document")
     .modal-content
       .modal-header
-        h5.modal-title#exampleModalLabel This Form isn't active yet
+        h5.modal-title#exampleModalLabel This page isn't available yet :c
         button(type="button" class="close" data-dismiss="modal" aria-label="Close")
           span(aria-hidden="true") &times;
       .modal-body
         p This is a test
       .modal-footer
         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
-        button(type="button" class="btn btn-primary") Send Mail
+        button(type="button" class="btn btn-primary") I am a button

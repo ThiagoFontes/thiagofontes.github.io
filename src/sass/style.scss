@@ -154,6 +154,10 @@ section {
   color: #323232;
 }
 
+.item-title, .item-excerpt {
+  margin-left: 8px;
+}
+
 .box-border {
   padding: 1px;
   margin: 2px;
@@ -229,13 +233,10 @@ section {
   padding: 0px;
 }
 
-.ico-line {
-  display:flex;
-  // flex-wrap: wrap;
+.contact-line {
+  display: flex;
   justify-content: space-between;
-  align-items: end;
-  text-decoration: none;
-  color: #fafafa;
+  width: 100%;
 }
 
 .contact-field-icon, .contact-field-text {
@@ -333,10 +334,10 @@ section {
   margin-top: -10px; // Half of the prev/next buttons height here in negatives to center them perfectly
 }
 .owl-prev {
-  margin-left: -2;
+  margin-left: -9px;
 }
 .owl-next {
-  right: 0;
+  right: -8px;
 }
 
 .owl-prev:focus, .owl-next:focus {
