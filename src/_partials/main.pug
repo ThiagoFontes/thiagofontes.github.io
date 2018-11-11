@@ -8,19 +8,19 @@
               img(alt="Photo of Thiago Fontes",src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1705112/profile/profile-512.jpg")#profile-img
             h2.session-heading Contact
             br
-            a(href='https://www.linkedin.com/in/fontesthiago/')
+            a(href='https://www.linkedin.com/in/fontesthiago/', target='_BLANK')
               .contact-line
                 p.contact-field-text
                   | linkedin.com/in/fontesthiago
                 .contact-field-icon
                   i.fab.fa-linkedin
-            a(href='https://github.com/ThiagoFontes')
+            a(href='https://github.com/ThiagoFontes', target='_BLANK')
               .contact-line
                 p.contact-field-text
                   | github.com/ThiagoFontes
                 .contact-field-icon
                   i.fab.fa-github
-            a(href='https://codepen.io/FontesT')
+            a(href='https://codepen.io/FontesT', target='_BLANK')
               .contact-line
                 p.contact-field-text
                   | codepen.io/FontesT
@@ -104,13 +104,14 @@
               h2.session-heading-3 Blog
             .blog
               .owl-carousel.owl-theme#carousel-blog
-                each val in portifolio
+                each val in blog
                   .box-border.left-up-notch(style="background:white")
                     .blog-item.left-up-notch(type="button" data-toggle="modal" data-target="#modalTest")
                       figure.portfolio-img
                         img(src= val.image)
                       h1.item-title= val.title
                       p.item-excerpt= val.content
+                      p.item-excerpt= val.sources[0]
             button.btn.btn-outline-light.btn-sm(type="button" data-toggle="modal" data-target="#modalTest")
                 | View More
 

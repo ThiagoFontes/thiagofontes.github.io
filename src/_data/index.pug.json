@@ -19,5 +19,17 @@
       "image": "/img/image.jpg",
       "content": "Noice 4"
     }
+  ],
+  "blog": [{
+      "title": "Blog post 1",
+      "image": "img/image.jpg",
+      "sources": [["url1","src1"],["url2","src2"]],
+      "content": "A nice article about this"
+    }, {
+      "title": "Blog post 2",
+      "image": "img/image.jpg",
+      "sources": [["url1","src1"],["url2","src2"]],
+      "content": "A nice article about that"
+    }
   ]
 }
