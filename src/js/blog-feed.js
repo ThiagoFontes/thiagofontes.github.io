@@ -1,7 +1,7 @@
 var xmlhttp = new XMLHttpRequest();
 
 //Url with the Json
-var url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@medium/";
+var url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ThiagoSFontes/";
 
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -27,7 +27,7 @@ function createCarousel(myJson) {
   var out = "";
   var i;
   
-  for(i = 0; i < 6; i++) {
+  for(i = 0; i < myJson.items.length; i++) {
     //Create div item
     var item = document.createElement('div');
     item.className = 'box-border left-up-notch';
