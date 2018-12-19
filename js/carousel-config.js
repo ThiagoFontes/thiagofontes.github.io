@@ -1,1 +1,35 @@
-$("#carousel-portfolio").owlCarousel({loop:!0,margin:0,padding:0,nav:!0,responsive:{0:{items:1},600:{items:2},1e3:{items:3}}});
+$('#carousel-portfolio').owlCarousel({
+    loop:true,
+    margin:0,
+    padding:0,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+  })
+
+//   $('#carousel-blog').owlCarousel({
+//     loop:true,
+//     margin:0,
+//     padding:0,
+//     nav:true,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         600:{
+//             items:2
+//         },
+//         1000:{
+//             items:2
+//         }
+//     }
+//   })
