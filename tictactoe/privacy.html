@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Privacy Policy</title> -->
+</head>
+
+<body style="max-width:900px;text-align:left;margin-left:auto;margin-right:auto;margin-bottom: 50;">
+
+    <script>
+        // Função para detectar o idioma preferido do usuário
+        function getUserLanguage() {
+            return navigator.language || navigator.userLanguage;
+        }
+
+        // Função para criar e adicionar elementos com o texto traduzido
+        function createTranslatedElements() {
+            const language = getUserLanguage().startsWith('pt') ? 'pt' : 'en';
+
+            const content = {
+                en: {
+                    'Privacy Policy': 'Privacy Policy',
+                    'We takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.': 'We takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.',
+                    'Collection of Routine Information': 'Collection of Routine Information',
+                    'This app track basic information about their users. This information includes, but is not limited to, IP addresses, app details, timestamps, game stats and referring pages. None of this information can personally identify specific user to this app. The information is tracked for routine administration and maintenance purposes.': 'This app track basic information about their users. This information includes, but is not limited to, IP addresses, app details, timestamps, game stats and referring pages. None of this information can personally identify specific user to this app. The information is tracked for routine administration and maintenance purposes.',
+                    'Cookies and local data': 'Cookies and local data',
+                    'Where necessary, this app uses cookies and local data to store information about a visitor’s preferences and history in order to better serve the user and/or present the user with customized content.': 'Where necessary, this app uses cookies and local data to store information about a visitor’s preferences and history in order to better serve the user and/or present the user with customized content.',
+                    'Advertisement and Other Third Parties': 'Advertisement and Other Third Parties',
+                    'Advertising partners and other third parties may use cookies, scripts and/or web beacons to track user activities on this app in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This app has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to [opt out of Google’s cookie usage](http://www.google.com/privacy_ads.html).': 'Advertising partners and other third parties may use cookies, scripts and/or web beacons to track user activities on this app in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This app has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to [opt out of Google’s cookie usage](http://www.google.com/privacy_ads.html).',
+                    'Links to Third Party Websites': 'Links to Third Party Websites',
+                    'We have included links on this app for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.': 'We have included links on this app for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.',
+                    'Security': 'Security',
+                    'The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While We strive to use commercially acceptable means to protect your personal information, We cannot guarantee its absolute security.': 'The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While We strive to use commercially acceptable means to protect your personal information, We cannot guarantee its absolute security.',
+                    'Changes To This Privacy Policy': 'Changes To This Privacy Policy',
+                    'This Privacy Policy is effective as of 05/05/2024 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If We make any material changes to this Privacy Policy, We will notify you either through the email address you have provided us, or by placing a prominent notice on our app.': 'This Privacy Policy is effective as of 05/05/2024 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If We make any material changes to this Privacy Policy, We will notify you either through the email address you have provided us, or by placing a prominent notice on our app.',
+                    'Contact Information': 'Contact Information',
+                    'For any questions or concerns regarding the privacy policy, please send us an email to contact@thiagofontes.dev.': 'For any questions or concerns regarding the privacy policy, please send us an email to contact@thiagofontes.dev.',
+                    '':''
+                },
+                pt: {
+                    'Privacy Policy': 'Política de Privacidade',
+                    'We takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.': 'Nós levamos sua privacidade a sério. Para proteger melhor sua privacidade, fornecemos este aviso de política de privacidade explicando como suas informações pessoais são coletadas e usadas.',
+                    'Collection of Routine Information': 'Coleta de Informações Rotineiras',
+                    'This app track basic information about their users. This information includes, but is not limited to, IP addresses, app details, timestamps, game stats and referring pages. None of this information can personally identify specific user to this app. The information is tracked for routine administration and maintenance purposes.': 'Este aplicativo rastreia informações básicas sobre seus usuários. Essas informações incluem, mas não estão limitadas a, endereços IP, detalhes do aplicativo, carimbos de data/hora, estatísticas do jogo e páginas de referência. Nenhuma dessas informações pode identificar pessoalmente um usuário específico para este aplicativo. As informações são rastreadas para fins de administração e manutenção de rotina.',
+                    'Cookies and local data': 'Cookies e Dados Locais',
+                    'Where necessary, this app uses cookies and local data to store information about a visitor’s preferences and history in order to better serve the user and/or present the user with customized content.': 'Quando necessário, este aplicativo usa cookies e dados locais para armazenar informações sobre as preferências e o histórico de um visitante, a fim de servir melhor o usuário e/ou apresentar ao usuário conteúdo personalizado.',
+                    'Advertisement and Other Third Parties': 'Publicidade e Outros Terceiros',
+                    'Advertising partners and other third parties may use cookies, scripts and/or web beacons to track user activities on this app in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This app has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to [opt out of Google’s cookie usage](http://www.google.com/privacy_ads.html).': 'Parceiros de publicidade e outros terceiros podem usar cookies, scripts e/ou web beacons para rastrear as atividades do usuário neste aplicativo para exibir anúncios e outras informações úteis. Esse rastreamento é feito diretamente pelos terceiros por meio de seus próprios servidores e está sujeito às suas próprias políticas de privacidade. Este aplicativo não tem acesso ou controle sobre esses cookies, scripts e/or web beacons que podem ser usados por terceiros. Saiba como [optar por não utilizar os cookies do Google](http://www.google.com/privacy_ads.html).',
+                    'Links to Third Party Websites': 'Links para Sites de Terceiros',
+                    'We have included links on this app for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.': 'Incluímos links neste aplicativo para seu uso e referência. Não somos responsáveis pelas políticas de privacidade desses sites. Você deve estar ciente de que as políticas de privacidade desses sites podem diferir das nossas.',
+                    'Security': 'Segurança',
+                    'The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While We strive to use commercially acceptable means to protect your personal information, We cannot guarantee its absolute security.': 'A segurança de suas informações pessoais é importante para nós, mas lembre-se de que nenhum método de transmissão pela Internet, ou método de armazenamento eletrônico, é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger suas informações pessoais, não podemos garantir sua segurança absoluta.',
+                    'Changes To This Privacy Policy': 'Alterações nesta Política de Privacidade',
+                    'This Privacy Policy is effective as of 05/05/2024 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If We make any material changes to this Privacy Policy, We will notify you either through the email address you have provided us, or by placing a prominent notice on our app.': 'Esta Política de Privacidade é eficaz a partir de 05/05/2024 e permanecerá em vigor, exceto em relação a quaisquer alterações em suas disposições no futuro, que entrarão em vigor imediatamente após serem publicadas nesta página. Reservamos o direito de atualizar ou alterar nossa Política de Privacidade a qualquer momento e você deve verificar esta Política de Privacidade periodicamente. Se fizermos alterações materiais nesta Política de Privacidade, notificaremos você através do endereço de e-mail que você nos forneceu ou colocando um aviso proeminente em nosso aplicativo.',
+                    'Contact Information': 'Informações de Contato',
+                    'For any questions or concerns regarding the privacy policy, please send us an email to contact@thiagofontes.dev.': 'Para quaisquer perguntas ou preocupações sobre a política de privacidade, por favor nos envie um e-mail para contact@thiagofontes.dev.',
+                    '':''
+                }
+            };
+
+            // Create and append elements with translated text
+            const body = document.body;
+
+            // const h1 = document.createElement('h1');
+            // h1.innerText = content[language]['Privacy Policy'];
+            // body.appendChild(h1);
+
+            Object.keys(content[language]).forEach((key, index) => {
+                const element = index == 0 ? 'h1' : (index % 2 === 0 ? 'h2' : 'p');
+                const text = content[language][key];
+                const node = document.createElement(element);
+                node.innerText = text;
+                body.appendChild(node);
+            });
+        }
+
+        // Chama a função para criar elementos traduzidos quando a página carrega
+        window.onload = createTranslatedElements;
+    </script>
+
+</body>
+
+</html>
