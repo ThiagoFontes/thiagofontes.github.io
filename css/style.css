@@ -71,8 +71,17 @@ header {
     margin-bottom: 20px
 }
 
-.row {
-    overflow: hidden
+row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row>[class*='col-'] {
+    display: flex;
+    flex-direction: column;
 }
 
 .h-name {
@@ -157,6 +166,31 @@ section {
 .blog,
 .portifolio {
     margin-top: 30px
+}
+
+.portifolio-preview,
+.blog-preview {
+    height: 100%;
+}
+
+.portifolio-preview .box-border {
+    height: calc(100% - var(--notchSize) - 4px);
+}
+
+/* On small screens: use full height, ignore notch */
+@media (max-width: 991.98px) {
+    .portifolio-preview .box-border {
+        height: 100%;
+    }
+}
+
+.blog-preview .box-border {
+    height: calc(100% - 2px);
+}
+
+.box-border .box,
+.box-border .box-dec {
+    height: 100%;
 }
 
 .texts {
