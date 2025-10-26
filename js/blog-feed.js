@@ -79,7 +79,7 @@ function createCarousel(myJson) {
   $('#blog').owlCarousel({
     loop: true,
     margin: 0,
-    nav: true,
+    nav: false,
     items: 1,
     lazyLoad: true,
     autoplay: true,
