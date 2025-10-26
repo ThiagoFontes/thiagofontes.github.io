@@ -3,7 +3,7 @@ var xmlhttp = new XMLHttpRequest();
 //Url with the Json
 var url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ThiagoSFontes/";
 
-xmlhttp.onreadystatechange = function() {
+xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     var myJson = JSON.parse(this.responseText);
     createCarousel(myJson);
@@ -13,81 +13,88 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-function getImage( str ) {
+function getImage(str) {
   //Regular expression to find image source attribute
   var regex = /<img.*?src=['"](.*?)['"]/;
   try {
-    return regex.exec(str.substr(0,1200))[1];
-  } catch(err) {
+    return regex.exec(str.substr(0, 1200))[1];
+  } catch (err) {
     return 'img/image.jpg';
   }
 }
 
 function createCarousel(myJson) {
-  var out = "";
-  var i;
-  
-  for(i = 0; i < myJson.items.length; i++) {
-    //Create div item
+  var blogContainer = document.getElementById("blog");
+  blogContainer.innerHTML = '';
+  for (var i = 0; i < myJson.items.length; i++) {
+    // Create carousel item as a div
     var item = document.createElement('div');
     item.className = 'box-border left-up-notch';
-    //.box-border.left-up-notch(style="background:white")
-    //  .blog-item.left-up-notch
+
+    // Container for blog content
     var container = document.createElement('div');
     container.className = 'left-up-notch blog-item';
-    container.type = 'button';
-    container.action = myJson.items[i].link;
-    
-    //Create image if there's a image
+    container.style.cursor = 'pointer';
+    // Add click handler to open Medium article
+    (function (link, el) {
+      el.onclick = function () {
+        window.open(link, '_blank');
+      };
+    })(myJson.items[i].link, container);
+
+    // Image
     var postImg = document.createElement('img');
-    if(getImage( myJson.items[i].description ) !== -1) {
-      postImg.src = getImage( myJson.items[i].description );
+    var imgSrc = getImage(myJson.items[i].description);
+    if (imgSrc && imgSrc !== -1) {
+      postImg.src = imgSrc;
       postImg.classList.add('itemImg');
     }
-    
-    
-    //Create Title
+
+    // Title
     var title = document.createElement('h2');
     title.className = 'item-title';
-    title.appendChild(document.createTextNode( myJson.items[i].title));
-    var description = document.createElement('p');
-    description.appendChild(document.createTextNode( myJson.items[i].description));
-    
+    title.appendChild(document.createTextNode(myJson.items[i].title));
+
+    // Description
     var texts = document.createElement('div');
-    texts.classList.add('texts')
+    texts.classList.add('texts');
     texts.appendChild(title);
-    texts.insertAdjacentHTML( 'beforeend', myJson.items[i].description.replace(/<figure>.*?<\/figure>/g,"").substring(0,100)+'...' );
-    texts.className = 'texts';
-    //inserting elements into item
+    texts.insertAdjacentHTML('beforeend', myJson.items[i].description.replace(/<figure>.*?<\/figure>/g, "").substring(0, 100) + '...');
+
+    // Assemble item
     container.appendChild(postImg);
     container.appendChild(texts);
     item.appendChild(container);
-    // var a = document.createElement('a');
-    // a.href = myJson.items[i].link;
-    // a.target = '_BLANK'
-    // a.appendChild(item);
-    out += item.outerHTML;
+    blogContainer.appendChild(item);
   }
-  
-  document.getElementById("blog").innerHTML = out;
-  
-  //Starting our caroulsel with Jquery take a look at https://owlcarousel2.github.io/OwlCarousel2/docs/started-installation.html
-  $('.owl-carousel').owlCarousel({
-    loop:true,
+
+  // Destroy previous Owl Carousel instance if exists
+  if ($('#blog').hasClass('owl-loaded')) {
+    $('#blog').trigger('destroy.owl.carousel');
+    $('#blog').removeClass('owl-loaded owl-drag');
+    $('#blog').find('.owl-stage-outer').children().unwrap();
+  }
+
+  // Initialize Owl Carousel specifically for the blog section
+  $('#blog').owlCarousel({
+    loop: true,
     margin: 0,
-    nav:true,
+    nav: true,
     items: 1,
-    lazyload: true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
+    lazyLoad: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1000: { items: 1 }
     }
-  })
+  });
+
+  // Allow anchor tags to be clickable inside carousel
+  $('#blog').on('click', 'a', function (e) {
+    e.stopPropagation();
+  });
 }
