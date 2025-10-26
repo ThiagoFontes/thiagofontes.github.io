@@ -193,6 +193,16 @@ section {
     height: 100%;
 }
 
+.bottom-align {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.row .bottom-align {
+    left: 35px;
+}
+
 .texts {
     position: absolute;
     height: 50%;
