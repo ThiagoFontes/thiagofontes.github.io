@@ -165,7 +165,11 @@ section {
 
 .blog,
 .portifolio {
-    margin-top: 30px
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
 }
 
 .portifolio-preview,
@@ -184,6 +188,22 @@ section {
     }
 }
 
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    margin: 16px;
+}
+
+.project-card img {
+    width: 120px;
+    height: 120px;
+    /* border: #212121 1px solid;
+    border-radius: 0px; */
+    padding: 4px;
+}
+
 .blog-preview .box-border {
     height: calc(100% - 2px);
 }
@@ -193,14 +213,22 @@ section {
     height: 100%;
 }
 
-.bottom-align {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
+@media (max-width: var(--bs-breakpoint-lg)) {
+    .bottom-align {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+    }
+}
+
+@media (max-width: var(--bs-breakpoint-lg)) {
+    .row .bottom-align {
+        left: 35px;
+    }
 }
 
 .row .bottom-align {
-    left: 35px;
+    margin-left: -5px;
 }
 
 .texts {
